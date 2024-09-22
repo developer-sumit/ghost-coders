@@ -17,8 +17,13 @@ export default {
     <>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta property="og:title" content="Ghost Coders" />
-      <meta property="og:description" content="Documenting our SIH project in details" />
+      <meta
+        property="og:description"
+        content="Documenting our SIH project in details"
+      />
     </>
   ),
   project: { link: "https://github.com/developer-sumit/ghost-coders" },
+  editLink: false, // Disables "Edit this page" link
+  feedback: false, // Disables "Question? Give us feedback →" link
 };
