@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "ghost-coders"
+    "default": "ghost-coders",
+    "site": "ghostcoders"
   }
 }
