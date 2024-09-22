@@ -1,0 +1,61 @@
+import Image from "next/image";
+import { useEffect, useState } from "react";
+
+# Design Gallery
+
+Welcome to our design gallery! Here you can find some of the UI designs we have created for our project.
+
+## App Designs
+
+<div>
+  <ClientOnly
+    style={{
+      display: "flex",
+      justifyContent: "space-around",
+      alignItems: "center",
+      flexWrap: "wrap",
+    }}
+  >
+    <div style={{ margin: "10px" }}>
+      <Image
+        src={require("../assets/ui/app/home.png")}
+        alt="Home UI Design"
+        width={300}
+        height={300}
+        style={{
+          borderRadius: "8px",
+          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+        }}
+      />
+      <p style={{ textAlign: "center", marginTop: "10px" }}>Home Screen</p>
+    </div>
+    <div style={{ margin: "10px" }}>
+      <Image
+        src={require("../assets/ui/app/profile.png")}
+        alt="Profile UI Design"
+        width={300}
+        height={300}
+        style={{
+          borderRadius: "8px",
+          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+        }}
+      />
+      <p style={{ textAlign: "center", marginTop: "10px" }}>Profile Screen</p>
+    </div>
+  </ClientOnly>
+</div>
+
+More coming soon...
+
+## Web Designs
+
+Work in Progress...
+
+export function ClientOnly({ children, ...delegated }) {
+  const [hasMounted, setHasMounted] = useState(false);
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
+  if (!hasMounted) return null;
+  return <div {...delegated}>{children}</div>;
+}

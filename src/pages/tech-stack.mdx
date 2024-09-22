@@ -1,0 +1,89 @@
+# Tech Stack
+
+## Front-End (App)
+
+### React Native (Bare)
+
+- For developing cross-platform mobile applications for both iOS and Android.
+- Not using Expo due to its build APK size and unnecessary packages shipped during the APK build
+
+### Zustand
+
+- For managing the application state in a predictable way.
+- Instead of Redux, we are using zustand so that we can easily understand and manage the code
+
+### TypeScript
+
+- For type safety and better code maintainability in the mobile app.
+
+### React Navigation
+
+- For handling navigation within the mobile application.
+
+## Front-End (Web)
+
+### Next.js & Typescript
+
+- Utilized for server-side rendering and static site generation to improve performance and SEO.
+- React.js is great but Next.js is even better if used properly and spice it up we are using Vercel's Hosting.
+
+### Tailwind CSS
+
+- For styling the web pages.
+
+## Back-End
+
+### Node.js
+
+- For building the server-side logic and handling requests.
+
+### Express.js
+
+- For building RESTful APIs and handling routing.
+
+### Socket.io
+
+- For multiplayer games. Connecting and Listening on both the ends for the user's next move.
+
+### MongoDB
+
+- For storing and retrieving application data.
+
+### Firebase Authentication
+
+- Setting up Authentication takes time so we are using Firebase Authentication to add authentication providers such as Google, Facebook, Github, Google Play Games, and even custom auth methods like Email and Password, Mobile Number, etc
+
+### Firebase Storage & Cloudinary
+
+- For storing user's profile pictures
+- Using Cloudinary as Backup Storage. Like if we need more optimised and fast loading of images then we will switch from Firebase to Cloudinary depending on the user base
+
+## APIs
+
+### Gemini AI
+
+- A trained mini AI might make mistakes because of the size of data we can provide. But Gemini is trained on a large amount of data from the internet and it keeps improving day by day. So adding Gemini for random quiz question seems like the right choice.
+
+## DevOps
+
+### Vercel Hosting & GitHub Actions
+
+- Firebase doesn't provide Server Side Rendering in its Free Tier. So for that reason, we are using Vercel's Hosting.
+- And to ease this process. We are using GitHub Actions for automating the build, test, and deployment processes.
+
+## Testing
+
+### Jest
+
+- For writing and running unit tests.
+
+## Tools
+
+### Postman
+
+- For testing and debugging APIs.
+
+---
+
+This tech stack ensures that our project is built using modern, efficient, and scalable technologies, providing a robust foundation for development and deployment. \
+There are other packages as well but they don't need that much explaination as these do.
