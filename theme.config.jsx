@@ -11,7 +11,21 @@ export default {
     ),
   },
   navigation: { prev: true, next: true },
-  footer: { text: <span>Team Ghost Coders</span> },
+  footer: {
+    text: (
+      <span>
+        Developed by&nbsp;
+        <a
+          href="https://giantguy.web.app"
+          target="_blank"
+          style={{ color: "#f97316" }}
+        >
+          Sumit Singh Rathore
+        </a>
+        &nbsp;- Team Leader of Ghost Coders
+      </span>
+    ),
+  },
   logo: <span>Team Ghost Coders</span>,
   head: (
     <>
@@ -19,7 +33,7 @@ export default {
       <meta property="og:title" content="Ghost Coders" />
       <meta
         property="og:description"
-        content="Documenting our SIH project in details"
+        content="Team Ghost Coders presenting the SIH project on the statement 'SIH1699'"
       />
     </>
   ),

@@ -16,32 +16,54 @@ Welcome to our design gallery! Here you can find some of the UI designs we have 
       flexWrap: "wrap",
     }}
   >
-    <div style={{ margin: "10px" }}>
-      <Image
-        src={require("../assets/ui/app/home.png")}
-        alt="Home UI Design"
-        width={300}
-        height={300}
-        style={{
-          borderRadius: "8px",
-          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-        }}
-      />
-      <p style={{ textAlign: "center", marginTop: "10px" }}>Home Screen</p>
-    </div>
-    <div style={{ margin: "10px" }}>
-      <Image
-        src={require("../assets/ui/app/profile.png")}
-        alt="Profile UI Design"
-        width={300}
-        height={300}
-        style={{
-          borderRadius: "8px",
-          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-        }}
-      />
-      <p style={{ textAlign: "center", marginTop: "10px" }}>Profile Screen</p>
-    </div>
+    {[
+      {
+        caption: "Home Screen",
+        alt: "Home UI Design",
+        src: require("../assets/ui/app/home.png"),
+      },
+      {
+        caption: "Profile Screen",
+        alt: "Profile UI Design",
+        src: require("../assets/ui/app/profile.png"),
+      },
+      {
+        caption: "Sign In Screen",
+        alt: "Sign In UI Design",
+        src: require("../assets/ui/app/sign-in.png"),
+      },
+      {
+        caption: "Challenges Screen",
+        alt: "Challenges UI Design",
+        src: require("../assets/ui/app/challenges.png"),
+      },
+      {
+        caption: "Settings Screen",
+        alt: "Settings UI Design",
+        src: require("../assets/ui/app/settings.png"),
+      },
+      {
+        caption: "About Screen",
+        alt: "About UI Design",
+        src: require("../assets/ui/app/about.png"),
+      },
+    ].map((image, index) => (
+      <div key={index} style={{ margin: "10px" }}>
+        <Image
+          src={image.src}
+          alt={image.alt}
+          width={300}
+          height={300}
+          style={{
+            borderRadius: "8px",
+            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+          }}
+        />
+        <p style={{ textAlign: "center", marginTop: "10px" }}>
+          {image.caption}
+        </p>
+      </div>
+    ))}
   </ClientOnly>
 </div>
 
